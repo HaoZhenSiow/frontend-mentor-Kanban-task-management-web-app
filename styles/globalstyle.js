@@ -35,9 +35,11 @@ const GlobalStyle = createGlobalStyle`
   --heading-m-fs: 15px;
   --heading-m-lh: 19px;
 
+  --logo-margin-inline-end: 16px;
+
   --header-padding-inline: ${fluid.container(16, 24, 16)};
-  --header-height: ${fluid.calc(64, 81, 's', 'px')}
-  --header-bg: var(--white)
+  --header-height: ${fluid.calc(64, 81, 's', 'px')};
+  --header-bg: var(--white);
 }
 
 /* to prevent font-size looping use :not()*/
@@ -163,7 +165,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 
 @media (min-width: 768px) {
     :root {
-        --header-height: ${fluid.calc(81, 97, 'b', 'px')}
+        --header-height: ${fluid.calc(81, 97, 'b', 'px')};
+        --logo-margin-inline-end: ${fluid.calc(81.47, 112.47, 'b', 'px')};
     }
 }
 `;

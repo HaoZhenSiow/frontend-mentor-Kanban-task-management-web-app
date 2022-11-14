@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-import fluid from '../utils/fluid';
+import HeaderLeft from './HeaderLeft'
+import HeaderRight from './HeaderRight'
 
 const HeaderStyled = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: var(--header-padding-inline);
-  background-color: white;
+  background-color: var(--header-bg);
   height: var(--header-height);
 `
 
@@ -13,8 +15,8 @@ const Header = props => {
   
   return (
     <HeaderStyled>
-      <div>left</div>
-      <div>right</div>
+      <HeaderLeft/>
+      <HeaderRight/>
     </HeaderStyled>
   );
 }
