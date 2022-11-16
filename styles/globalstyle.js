@@ -7,16 +7,6 @@ const GlobalStyle = createGlobalStyle`
 /* scale 1.067, 14px, 320px viewport and 1.2 18px, 1920px viewport */
 /* viewport - viewport, fluid-container-padding - fluid container horizontal padding */
 :root {
-  --fluid-lg: clamp(1.2101247690rem, calc(0.8922777225rem + 1.58923523100vw), 2.79936rem);
-  --fluid-h1: clamp(1.1341375530rem, calc(0.8944050633rem + 1.19866244700vw), 2.33280rem);
-  --fluid-h2: clamp(1.0629217930rem, calc(0.8867061512rem + 0.88107820740vw), 1.94400rem);
-  --fluid-h3: clamp(0.9961778750rem, calc(0.8714134500rem + 0.62382212500vw), 1.62000rem);
-  --fluid-h4: clamp(0.9336250000rem, calc(0.8503500000rem + 0.41637500000vw), 1.35000rem);
-  --fluid-h5: clamp(0.8750000000rem, calc(0.8250000000rem + 0.25000000000vw), 1.12500rem);
-  --fluid-h6: clamp(0.8200562324rem, calc(0.7965674789rem + 0.11744376760vw), 0.93750rem);
-  --fluid-sm: clamp(0.7685625421rem, calc(0.7660250505rem + 0.01268745789vw), 0.78125rem);
-  --fluid-line-height: calc(1.8em - .4 * ((100vw - 29.08324552em) / (77.58342115)));
-
   --purple: #635FC7;
   --purple-hover: #A8A4FF;
   --red: #EA5555;
@@ -25,9 +15,8 @@ const GlobalStyle = createGlobalStyle`
   --black: #000112;
   --very-dark-grey: #20212C;
   --dark-grey: #2B2C37;
-  --dark-line: #3E3F4E;
   --medium-grey: #828FA3;
-  --light-line: #E4EBFA;
+  --line-color: #E4EBFA;
   --light-grey: #F4F7FD;
 
   --heading-l-fs: 18px;
@@ -35,31 +24,18 @@ const GlobalStyle = createGlobalStyle`
   --heading-m-fs: 15px;
   --heading-m-lh: 19px;
 
-  --logo-margin-inline-end: 16px;
-
   --header-padding-inline: ${fluid.container(16, 24, 16)};
   --header-height: ${fluid.calc(64, 81, 's', 'px')};
   --header-bg: var(--white);
+  --logo-margin-inline-end: 16px;
+  --boardname-color: var(--black);
+  --boardname-fs: ${fluid.calc(18, 20, 's', 'px')};
+  --boardname-lh: ${fluid.calc(22.68, 25.2, 's', 'px')};
 }
 
 /* to prevent font-size looping use :not()*/
 *:not(html, small, blockquote *)  {
   font-size: var(--fluid-h5);
-}
-h1 { font-size: var(--heading-l-fs); line-height: var(--heading-l-lh); }
-h2 {font-size: var(--fluid-h2);}
-h3 {font-size: var(--fluid-h3);}
-h4 {font-size: var(--fluid-h4);} 
-/* h5 is alread set to var(--heading-5)*/
-h6 {font-size: var(--fluid-h6);} 
-p {line-height: var(--fluid-line-height);}
-
-@media (max-width: 414px){
-p {line-height: 1.8em;} 
-}
-
-@media (min-width: 1920px){
-p {line-height: 1.4em;} 
 }
 
 * {box-sizing: border-box;}
@@ -156,7 +132,9 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --header-bg: var(--dark-grey)
+        --line-color: #3E3F4E;
+        --header-bg: var(--dark-grey);
+        --boardname-color: var(--white);
     }
     body {
         background-color: var(--very-dark-grey);
@@ -167,6 +145,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
     :root {
         --header-height: ${fluid.calc(81, 97, 'b', 'px')};
         --logo-margin-inline-end: ${fluid.calc(81.47, 112.47, 'b', 'px')};
+        --boardname-fs: ${fluid.calc(20, 24, 'm', 'px')};
+        --boardname-lh: ${fluid.calc(25.2, 30.24, 'm', 'px')};
     }
 }
 `;
