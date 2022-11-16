@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import HeaderLeft from './HeaderLeft'
 import HeaderRight from './HeaderRight'
 
-const HeaderStyled = styled.div`
+const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;

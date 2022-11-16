@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
   --boardname-color: var(--black);
   --boardname-fs: ${fluid.calc(18, 20, 's', 'px')};
   --boardname-lh: ${fluid.calc(22.68, 25.2, 's', 'px')};
+
+  --sidebar-width: ${fluid.calc(254, 290, 'b', 'px')};
+  --emptyboard-mt: ${fluid.calc(0.316, 0.32, 's', 'vh')};
+  
 }
 
 /* to prevent font-size looping use :not()*/
@@ -50,6 +54,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--light-grey);
+    min-width: 330px;
 }
 
 a {
@@ -147,6 +152,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
         --logo-margin-inline-end: ${fluid.calc(81.47, 112.47, 'b', 'px')};
         --boardname-fs: ${fluid.calc(20, 24, 'm', 'px')};
         --boardname-lh: ${fluid.calc(25.2, 30.24, 'm', 'px')};
+    
+        --emptyboard-mt: ${fluid.calc(0.32, 0.355, 'b', 'vh')};
     }
 }
 `;
