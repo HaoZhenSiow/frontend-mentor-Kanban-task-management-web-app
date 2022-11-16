@@ -1,15 +1,15 @@
 import Head from 'next/head'
-import EmptyBoard from '../components/EmptyBoard'
 import Header from '../components/header/Header'
+import Main from '../components/main/Main'
 
 export default function Home() {
   return (
     <>
-      <Header/>
       <Head>
         <title>Kanban Task Management Web App</title>
       </Head>
-      <EmptyBoard/>
+      <Header/>
+      <Main/>
     </>
     
   )

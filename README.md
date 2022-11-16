@@ -69,6 +69,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+This is my first NextJS app, it rendered at the server side before we can view anything in the browser. I have to use useEffect to run functions that read the document and window object for dynamic static site generation.
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
