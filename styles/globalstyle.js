@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
   --boardname-lh: ${fluid.calc(22.68, 25.2, 's', 'px')};
 
   --sidebar-width: ${fluid.calc(254, 290, 'b', 'px')};
+  --allboards-mt: max(15px, ${fluid.calc(31, 15, 'b', 'px')});
   --emptyboard-mt: ${fluid.calc(0.316, 0.32, 's', 'vh')};
   
 }
